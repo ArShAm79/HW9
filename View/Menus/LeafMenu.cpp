@@ -119,9 +119,9 @@ void LeafMenu::run() {
 
 
     } else if (name == "Show Professors") {
-        cout<<"Number\tFirstName\tLastName\tWorkHours\tTitle\n";
-        for (const auto & professor : controller.professors) {
-            cout <<  professor << endl;
+        cout << "Number\tFirstName\tLastName\tWorkHours\tTitle\n";
+        for (const auto &professor : controller.professors) {
+            cout << professor << endl;
         }
 
     } else if (name == "Add Student") {
@@ -134,15 +134,33 @@ void LeafMenu::run() {
         string last;
         cout << "Enter Last Name: ";
         cin >> last;
-        controller.addStudent(ID, first, last
-        );
+        controller.addStudent(ID, first, last);
     } else if (name == "Show Students") {
-        cout<<"Number\tFirstName\tLastName\tWorkHours\tPassedCourses\n";
-        for (const auto & student : controller.students) {
-            cout <<  student << endl;
+        cout << "Number\tFirstName\tLastName\tWorkHours\tPassedCourses\n";
+        for (const auto &student : controller.students) {
+            cout << student << endl;
         }
 
     } else if (name == "Add Course") {
+        string courseName;
+        string profLastName;
+        string semester;
+        int preCoursesSize;
+        vector<string> preCourses;
+        string crs;
+        cout << "Enter course name: ";
+        cin >> courseName;
+        cout << "Enter Professor Last name: ";
+        cin >> profLastName;
+        cout << "Enter semester: ";
+        cin >> semester;
+        cout << "Enter number of preCourse: ";
+        cin >> preCoursesSize;
+        for (size_t i{0}; i < preCoursesSize; ++i) {
+            cin >> crs;
+            preCourses.push_back(crs);
+        }
+        controller.addCourse(courseName, profLastName, semester, preCourses);
 
     } else if (name == "Show All Courses") {
 
