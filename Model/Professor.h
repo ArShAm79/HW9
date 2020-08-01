@@ -16,7 +16,7 @@ private:
 public:
     Professor(){}
     Professor(std::string id, std::string first, std::string last, double wh, std::string title);
-    virtual double calculateSalary() const override;
+    virtual long double calculateSalary() const override;
 };
 
 

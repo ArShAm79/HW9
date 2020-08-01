@@ -34,9 +34,17 @@ string
 vector
 -
 
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Person.cpp
+Person.h
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Person.h
+
 C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Person.h
 string
 -
+
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Professor.cpp
+Professor.h
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Professor.h
 
 C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Professor.h
 string
@@ -45,6 +53,16 @@ iostream
 -
 Person.h
 C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Person.h
+
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Student.cpp
+Student.h
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Student.h
+regex
+-
+stdexcept
+-
+sstream
+-
 
 C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Student.h
 Person.h

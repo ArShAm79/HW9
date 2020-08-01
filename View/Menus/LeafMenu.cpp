@@ -95,7 +95,11 @@ void LeafMenu::run() {
         cout << "Done!\n";
 
     } else if (name == "Calculate Professor Salary") {
-
+        string ID;
+        cout << "Please enter ID\n";
+        cin >> ID;
+        cout << controller.findProfessor(ID).calculateSalary() << endl;
+        cout << "Done!\n";
 
     } else if (name == "Add Professor") {
 
