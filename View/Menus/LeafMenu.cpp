@@ -14,10 +14,27 @@ void LeafMenu::run() {
         for (size_t t{0}; t < controller.currentSemesterCourses.size(); t++) {
             cout << t + 1 << "_" << controller.currentSemesterCourses[t] << endl;
         }
-        cout<<"Done!\n";
+        cout << "Done!\n";
 
     } else if (name == "Take Course") {
-
+        string ID;
+        cout << "Please enter ID\n";
+        cin >> ID;
+        bool check = false;
+        for (auto &stu : controller.students) {
+            if (stu.studentId == ID) {
+                check = true;
+                cout << "Choose one course\n";
+                for (size_t t{0}; t < controller.currentSemesterCourses.size(); t++) {
+                    cout << t + 1 << "_" << controller.currentSemesterCourses[t] << endl;
+                }
+                int number;
+                cin >> number;
+                stu.currentSemesterCourses.insert({controller.currentSemesterCourses[number - 1].getCourseName(), 12});
+            }
+        }
+        if (!check)
+            cout << "This ID is invalid\n";
 
     } else if (name == "Drop Course") {
 

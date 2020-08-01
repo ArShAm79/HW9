@@ -9,8 +9,13 @@
 
 class Student : public Person {
     friend class Controller;
-    friend std::ostream& operator<<(std::ostream & output, const Student& student);
-    friend std::istream& operator>>(std::istream & input, Student& student);
+
+    friend class LeafMenu;
+
+    friend std::ostream &operator<<(std::ostream &output, const Student &student);
+
+    friend std::istream &operator>>(std::istream &input, Student &student);
+
 private:
     std::string studentId;
     std::vector<std::string> passedCourses;
@@ -18,10 +23,11 @@ private:
 
 public:
     Student() : Person() {}   // must be private
-    Student(const std::string& studentId, std::string first, std::string last , double workHours,
+    Student(const std::string &studentId, std::string first, std::string last, double workHours,
             std::vector<std::string> passedCourses, std::map<std::string, double> currentSemesterCourses);
 
     virtual double calculateSalary() const override;
+
     std::string toString() const;
 
     void setPassedCourses(const std::vector<std::string> &passedCourses);

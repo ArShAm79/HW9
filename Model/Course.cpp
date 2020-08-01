@@ -39,3 +39,7 @@ std::istream& operator>>(std::istream & input, Course& course){
 
     return input;
 }
+
+const string &Course::getCourseName() const {
+    return courseName;
+}
