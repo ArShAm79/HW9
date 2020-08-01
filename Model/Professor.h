@@ -14,9 +14,10 @@ private:
     std::string profId;
 
 public:
-    Professor(){}
+    Professor()= default;
     Professor(std::string id, std::string first, std::string last, double wh, std::string title);
-    virtual  double calculateSalary() const override;
+
+    virtual double calculateSalary() const override;
 };
 
 

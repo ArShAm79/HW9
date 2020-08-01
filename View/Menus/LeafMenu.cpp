@@ -30,8 +30,9 @@ void LeafMenu::run() {
         }
         int number;
         cin >> number;
-        controller.findStudent(ID).currentSemesterCourses.insert(
-                {controller.currentSemesterCourses[number - 1].getCourseName(), 0});
+//        controller.findStudent(ID).currentSemesterCourses.insert(
+//                {controller.currentSemesterCourses[number - 1].getCourseName(), 0});
+        controller.takeCourse(ID, controller.currentSemesterCourses[number - 1].getCourseName());
         cout << "Done!\n";
 
 
@@ -109,7 +110,6 @@ void LeafMenu::run() {
         string first;
         string last;
         string title;
-        double wh;
         cout << "Enter professor number: \n";
         cin >> id;
         cout << "Enter First Name: \n";
@@ -200,11 +200,11 @@ void LeafMenu::run() {
 
         }
     } else if (name == "CalculateTotalSalary") {
-         double ans = 0;
+        double ans = 0;
         for (auto &mathClass : controller.mathClass) {
             ans += mathClass->calculateSalary();
         }
-        cout << setw(10)<<fixed << ans <<fixed<< endl;
+        cout << setw(10) << fixed << ans << fixed << endl;
     } else {
         throw invalid_argument("This Menu has not been defined!!");
     }

@@ -21,7 +21,7 @@ public:
 
     DoubleMajorStudent() = default;
 
-    virtual  double calculateSalary() const;
+    virtual double calculateSalary() const;
 
     const std::string &getMajor2() const;
 

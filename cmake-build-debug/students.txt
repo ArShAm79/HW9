@@ -4,4 +4,4 @@
 952023018	Sara	Goli	232	0	0	
 952023019	Babak	Moghtader	231	0	0	
 952023020	Said	Ghorbani	123	0	1	Math2	19	
-952013018	Jamshid	Salehi	232	0	0	
+952013018	Jamshid	Salehi	232	0	1	Fizik1	0	
