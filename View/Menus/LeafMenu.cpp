@@ -1,4 +1,6 @@
+#include <fstream>
 #include "LeafMenu.h"
+#include "../../Model/DoubleMajorStudent.h"
 
 using namespace std;
 
@@ -126,13 +128,13 @@ void LeafMenu::run() {
 
     } else if (name == "Add Student") {
         string ID;
-        cout << "Enter student number: ";
+        cout << "Enter student number: \n";
         cin >> ID;
         string first;
-        cout << "Enter First Name: ";
+        cout << "Enter First Name: \n";
         cin >> first;
         string last;
-        cout << "Enter Last Name: ";
+        cout << "Enter Last Name:\n ";
         cin >> last;
         controller.addStudent(ID, first, last);
     } else if (name == "Show Students") {
@@ -167,7 +169,39 @@ void LeafMenu::run() {
             cout << course << endl;
         }
 
-    } else {
+    } else if (name == "ReadMembersFromFile") {
+        ifstream input("member.txt");
+        while (input.good()) {
+            char check;
+            input >> check;
+            if (check == 'S') {
+                string ID, first, last;
+                double wh;
+                input >> ID >> first >> last >> wh;
+                auto student = new Student{ID, first, last, wh, vector<string>(), map<string, double>()};
+                controller.mathClass.push_back(student);
+            } else if (check == 'P') {
+                string ID, first, last, title;
+                double wh;
+                input >> ID >> first >> last >> title >> wh;
+                auto professor = new Professor{ID, first, last, wh, title};
+                controller.mathClass.push_back(professor);
+            } else if (check == 'D') {
+                string ID, first, last;
+                double wh;
+                input >> ID >> first >> last >> wh;
+                auto doubleMajorStudent = new DoubleMajorStudent{ID, first, last, wh, vector<string>(),
+                                                                 map<string, double>(), "Math"};
+                controller.mathClass.push_back(doubleMajorStudent);
+            } else {
+                throw invalid_argument("Is not Available");
+            }
+
+        }
+   } //else if (name=="CalculateTotalSalary"){
+//        long double ans=0
+//    }
+    else {
         throw invalid_argument("This Menu hase not been defined!!");
     }
 }

@@ -7,7 +7,7 @@
 #include <utility>
 
 long double DoubleMajorStudent::calculateSalary() const {
-    return 6500 * getWorkHours()
+    return 6500 * getWorkHours();
 }
 
 DoubleMajorStudent::DoubleMajorStudent(const std::string &studentId, std::string first, std::string last,

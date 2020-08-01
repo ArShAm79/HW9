@@ -19,6 +19,8 @@ public:
 
     ~DoubleMajorStudent() = default;
 
+    DoubleMajorStudent() = default;
+
     virtual long double calculateSalary() const;
 
     const std::string &getMajor2() const;

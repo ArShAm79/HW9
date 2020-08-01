@@ -20,11 +20,13 @@ private:
     std::vector<Professor> professors;
     std::vector<Course> courses;
     std::vector<Course> currentSemesterCourses;
+    std::vector<Person *> mathClass;
 
-    Controller() = default;
 
 public:
     explicit Controller(std::string currentSemester);
+
+    Controller() = default;
 
     void load();
 
