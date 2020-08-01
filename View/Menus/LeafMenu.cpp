@@ -148,13 +148,13 @@ void LeafMenu::run() {
         int preCoursesSize;
         vector<string> preCourses;
         string crs;
-        cout << "Enter course name: ";
+        cout << "Enter course name: \n";
         cin >> courseName;
-        cout << "Enter Professor Last name: ";
+        cout << "Enter Professor Last name: \n";
         cin >> profLastName;
-        cout << "Enter semester: ";
+        cout << "Enter semester: \n";
         cin >> semester;
-        cout << "Enter number of preCourse: ";
+        cout << "Enter number of preCourse:\n";
         cin >> preCoursesSize;
         for (size_t i{0}; i < preCoursesSize; ++i) {
             cin >> crs;
@@ -163,6 +163,9 @@ void LeafMenu::run() {
         controller.addCourse(courseName, profLastName, semester, preCourses);
 
     } else if (name == "Show All Courses") {
+        for (const auto &course : controller.courses) {
+            cout << course << endl;
+        }
 
     } else {
         throw invalid_argument("This Menu hase not been defined!!");

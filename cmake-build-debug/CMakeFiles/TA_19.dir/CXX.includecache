@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Controller/Controller.cpp
+Controller.h
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Controller/Controller.h
+fstream
+-
+vector
+-
+map
+-
+
 C:/Users/AVAJANG/CLionProjects/EducationSystem/Controller/Controller.h
 string
 -
@@ -47,22 +57,4 @@ vector
 -
 map
 -
-
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/LeafMenu.cpp
-LeafMenu.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
-
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
-string
--
-Menu.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/Menu.h
-
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/Menu.h
-string
--
-vector
--
-../../Controller/Controller.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/Controller/Controller.h
 

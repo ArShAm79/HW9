@@ -125,10 +125,10 @@ bool Controller::inCourses(const std::string& courseName) const{
 bool Controller:: inProfessorsByLastName(const std::string& last) const{
     for( const auto& prof : professors ){
         if( prof.getLastName() == last){
-            return true;
+            return false;
         }
     }
-    return false;
+    return true;
 }
 
 Student& Controller:: findStudent(string ID){
