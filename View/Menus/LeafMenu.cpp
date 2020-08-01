@@ -55,11 +55,13 @@ void LeafMenu::run() {
         for (const auto &courses:controller.findStudent(ID).currentSemesterCourses) {
             cout << courses.first << endl;
         }
+        cout << "Done!\n";
     } else if (name == "Calculate Student Salary") {
         string ID;
         cout << "Please enter ID\n";
         cin >> ID;
         cout << controller.findStudent(ID).calculateSalary() << endl;
+        cout << "Done!\n";
 
     } else if (name == "Show Professor Courses In Current Semester") {
         string ID;
@@ -70,10 +72,30 @@ void LeafMenu::run() {
             if (currentSemesterCourse.getProfLastName() == profName)
                 cout << currentSemesterCourse.getCourseName() << endl;
         }
-
+        cout << "Done!\n";
     } else if (name == "Submit Grade") {
+        string ProID;
+        cout << "Please enter Professor ID\n";
+        cin >> ProID;
+        string course;
+        string profName = controller.findProfessor(ProID).getLastName();
+        for (auto &currentSemesterCourse : controller.currentSemesterCourses) {
+            if (currentSemesterCourse.getProfLastName() == profName)
+                cout << currentSemesterCourse.getCourseName() << endl;
+        }
+        cout << "Please enter Course ID\n";
+        cin >> course;
+        string StuID;
+        cout << "Please enter Student ID\n";
+        cin >> StuID;
+        double grade;
+        cout << "Please enter Grade \n";
+        cin >> grade;
+        controller.findStudent(StuID).currentSemesterCourses[course] = grade;
+        cout << "Done!\n";
 
     } else if (name == "Calculate Professor Salary") {
+
 
     } else if (name == "Add Professor") {
 
@@ -82,18 +104,14 @@ void LeafMenu::run() {
     } else if (name == "Add Student") {
         string ID;
         cout << "Enter student number: ";
-        cin >>
-            ID;
+        cin >> ID;
         string first;
         cout << "Enter First Name: ";
-        cin >>
-            first;
+        cin >> first;
         string last;
         cout << "Enter Last Name: ";
-        cin >>
-            last;
-        controller.
-                addStudent(ID, first, last
+        cin >> last;
+        controller.addStudent(ID, first, last
         );
     } else if (name == "Show Students") {
 
