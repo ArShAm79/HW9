@@ -6,7 +6,7 @@
 
 #include <utility>
 
-long double DoubleMajorStudent::calculateSalary() const {
+double DoubleMajorStudent::calculateSalary() const {
     return 6500 * getWorkHours();
 }
 

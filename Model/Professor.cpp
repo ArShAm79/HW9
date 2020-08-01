@@ -6,7 +6,7 @@ Professor::Professor(std::string id, std::string first, std::string last,
         double wh, std::string title)
         :  Person(move(first), move(last), wh), profId{move(id)}, title{move(title)} {}
 
-long double Professor::calculateSalary() const{
+ double Professor::calculateSalary() const{
     return 4'000'000 + 10000*getWorkHours();
 }
 

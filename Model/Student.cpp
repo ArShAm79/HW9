@@ -21,7 +21,7 @@ Student::Student(const std::string& studentId, std::string first, std::string la
             this->studentId = studentId;
         }
 
-long double Student::calculateSalary() const{
+ double Student::calculateSalary() const{
     return 5000 * getWorkHours();
 }
 

@@ -26,7 +26,7 @@ public:
     Student(const std::string &studentId, std::string first, std::string last, double workHours,
             std::vector<std::string> passedCourses, std::map<std::string, double> currentSemesterCourses);
 
-    virtual long double calculateSalary() const override;
+    virtual  double calculateSalary() const override;
 
     std::string toString() const;
 

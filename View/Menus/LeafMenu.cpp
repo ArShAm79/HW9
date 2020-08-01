@@ -1,6 +1,7 @@
 #include <fstream>
 #include "LeafMenu.h"
 #include "../../Model/DoubleMajorStudent.h"
+#include <iomanip>
 
 using namespace std;
 
@@ -170,7 +171,7 @@ void LeafMenu::run() {
         }
 
     } else if (name == "ReadMembersFromFile") {
-        ifstream input("member.txt");
+        ifstream input("members.txt");
         while (input.good()) {
             char check;
             input >> check;
@@ -198,10 +199,13 @@ void LeafMenu::run() {
             }
 
         }
-   } //else if (name=="CalculateTotalSalary"){
-//        long double ans=0
-//    }
-    else {
-        throw invalid_argument("This Menu hase not been defined!!");
+    } else if (name == "CalculateTotalSalary") {
+         double ans = 0;
+        for (auto &mathClass : controller.mathClass) {
+            ans += mathClass->calculateSalary();
+        }
+        cout << setw(10)<<fixed << ans <<fixed<< endl;
+    } else {
+        throw invalid_argument("This Menu has not been defined!!");
     }
 }

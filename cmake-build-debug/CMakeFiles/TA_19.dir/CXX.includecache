@@ -24,6 +24,10 @@ string
 vector
 -
 
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
+Student.h
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Student.h
+
 C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/Person.h
 string
 -
@@ -48,19 +52,15 @@ vector
 map
 -
 
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/CommandsFromFileMenu.h
-string
+C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/LeafMenu.cpp
+fstream
 -
-Menu.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/Menu.h
-../../Controller/Controller.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/Controller/Controller.h
-
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/InternalMenu.h
-string
+LeafMenu.h
+C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
+../../Model/DoubleMajorStudent.h
+C:/Users/AVAJANG/CLionProjects/EducationSystem/Model/DoubleMajorStudent.h
+iomanip
 -
-Menu.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/Menu.h
 
 C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
 string
@@ -75,20 +75,4 @@ vector
 -
 ../../Controller/Controller.h
 C:/Users/AVAJANG/CLionProjects/EducationSystem/Controller/Controller.h
-
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/View.cpp
-stdexcept
--
-View.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/View.h
-
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/View.h
-../Controller/Controller.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/Controller/Controller.h
-Menus/InternalMenu.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/InternalMenu.h
-Menus/CommandsFromFileMenu.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/CommandsFromFileMenu.h
-Menus/LeafMenu.h
-C:/Users/AVAJANG/CLionProjects/EducationSystem/View/Menus/LeafMenu.h
 
