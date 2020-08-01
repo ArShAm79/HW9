@@ -21,3 +21,7 @@ DoubleMajorStudent::DoubleMajorStudent(const std::string &studentId, std::string
 const std::string &DoubleMajorStudent::getMajor2() const {
     return major2;
 }
+
+void DoubleMajorStudent::setMajor2(const std::string &major2) {
+    DoubleMajorStudent::major2 = major2;
+}

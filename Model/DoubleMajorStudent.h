@@ -9,6 +9,7 @@
 #include "Student.h"
 
 class DoubleMajorStudent : public Student {
+
 private:
     std::string major2;
 public:
@@ -16,9 +17,13 @@ public:
                        std::vector<std::string> passedCourses, std::map<std::string, double> currentSemesterCourses,
                        std::string major2);
 
+    ~DoubleMajorStudent() = default;
+
     virtual long double calculateSalary() const;
 
     const std::string &getMajor2() const;
+
+    void setMajor2(const std::string &major2);
 };
 
 
