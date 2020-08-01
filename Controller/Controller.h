@@ -29,6 +29,7 @@ public:
             std::vector<std::string> pre);
     void takeCourse(const std::string& studentID, const std::string& courseName);
     Student& findStudent(std::string ID);
+    Professor& findProfessor(std::string ID);
 
 
     bool inStudents(const std::string& ID) const;

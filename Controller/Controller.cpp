@@ -139,6 +139,14 @@ Student& Controller:: findStudent(string ID){
     }
     throw invalid_argument("The Student was not found!!");
 }
+Professor& Controller:: findProfessor(std::string ID){
+    for( auto& pro : professors ){
+        if(pro.profId == ID){
+            return pro;
+        }
+    }
+    throw invalid_argument("The Professor was not found!!");
+}
 
 void Controller:: takeCourse(const std::string& studentID, const std::string& courseName){
     if(inCourses(courseName)){

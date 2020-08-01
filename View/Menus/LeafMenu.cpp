@@ -48,25 +48,28 @@ void LeafMenu::run() {
         cout << "Done!\n";
 
     } else if (name == "Show Student Courses In Current Semester") {
-        string temp;
-        cout << "Choose one course\n";
-        for (size_t t{0}; t < controller.currentSemesterCourses.size(); t++) {
-            cout << t + 1 << "_" << controller.currentSemesterCourses[t] << endl;
-        }
-        int number;
-        cin >> number;
-        for (auto &student : controller.students) {
-            for (const auto &courseName:student.currentSemesterCourses) {
-                if (temp == courseName.first) {
-                    cout << student.getFirstName() << " " << student.getLastName() << endl;
-                    break;
-                }
-            }
-        }
 
+        string ID;
+        cout << "Please enter ID\n";
+        cin >> ID;
+        for (const auto &courses:controller.findStudent(ID).currentSemesterCourses) {
+            cout << courses.first << endl;
+        }
     } else if (name == "Calculate Student Salary") {
+        string ID;
+        cout << "Please enter ID\n";
+        cin >> ID;
+        cout << controller.findStudent(ID).calculateSalary() << endl;
 
     } else if (name == "Show Professor Courses In Current Semester") {
+        string ID;
+        cout << "Please enter ID\n";
+        cin >> ID;
+        string profName = controller.findProfessor(ID).getLastName();
+        for (auto &currentSemesterCourse : controller.currentSemesterCourses) {
+            if (currentSemesterCourse.getProfLastName() == profName)
+                cout << currentSemesterCourse.getCourseName() << endl;
+        }
 
     } else if (name == "Submit Grade") {
 

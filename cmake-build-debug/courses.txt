@@ -1,1 +1,4 @@
-0
+3
+Math1	Mansouri	99-1	0
+Math2	Sahami	99-1	1	Math1
+Fizik2	Asgari	99-1	1	Math1
