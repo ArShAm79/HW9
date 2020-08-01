@@ -137,6 +137,10 @@ void LeafMenu::run() {
         controller.addStudent(ID, first, last
         );
     } else if (name == "Show Students") {
+        cout<<"Number\tFirstName\tLastName\tWorkHours\tPassedCourses\n";
+        for (const auto & student : controller.students) {
+            cout <<  student << endl;
+        }
 
     } else if (name == "Add Course") {
 
