@@ -2,55 +2,40 @@
 
 using namespace std;
 
-LeafMenu::LeafMenu(std::string name, Menu* parent)
-    : Menu{move(name), parent} {}
+LeafMenu::LeafMenu(std::string name, Menu *parent)
+        : Menu{move(name), parent} {}
 
-void LeafMenu:: showSubMenus() const {}
+void LeafMenu::showSubMenus() const {}
 
 void LeafMenu::run() {
     setCurrentMenu(parent);
 
-    if(name == "Show This Semester Courses"){
+    if (name == "Show This Semester Courses") {
+        for (size_t t{0}; t < controller.currentSemesterCourses.size(); t++) {
+            cout << t + 1 << "_" << controller.currentSemesterCourses[t] << endl;
+        }
+        cout<<"Done!\n";
 
-    }
+    } else if (name == "Take Course") {
 
-    else if(name == "Take Course"){
 
-    }
+    } else if (name == "Drop Course") {
 
-    else if(name == "Drop Course"){
+    } else if (name == "Show Student Courses In Current Semester") {
 
-    }
+    } else if (name == "Calculate Student Salary") {
 
-    else if(name == "Show Student Courses In Current Semester"){
+    } else if (name == "Show Professor Courses In Current Semester") {
 
-    }
+    } else if (name == "Submit Grade") {
 
-    else if(name == "Calculate Student Salary"){
+    } else if (name == "Calculate Professor Salary") {
 
-    }
+    } else if (name == "Add Professor") {
 
-    else if(name == "Show Professor Courses In Current Semester"){
+    } else if (name == "Show Professors") {
 
-    }
-
-    else if(name == "Submit Grade"){
-
-    }
-
-    else if(name == "Calculate Professor Salary"){
-
-    }
-
-    else if(name == "Add Professor"){
-
-    }
-
-    else if(name == "Show Professors"){
-
-    }
-
-    else if(name == "Add Student"){
+    } else if (name == "Add Student") {
         string ID;
         cout << "Enter student number: ";
         cin >> ID;
@@ -61,21 +46,13 @@ void LeafMenu::run() {
         cout << "Enter Last Name: ";
         cin >> last;
         controller.addStudent(ID, first, last);
-    }
+    } else if (name == "Show Students") {
 
-    else if(name == "Show Students"){
+    } else if (name == "Add Course") {
 
-    }
+    } else if (name == "Show All Courses") {
 
-    else if(name == "Add Course"){
-
-    }
-
-    else if(name == "Show All Courses"){
-
-    }
-
-    else{
+    } else {
         throw invalid_argument("This Menu hase not been defined!!");
     }
 }

@@ -6,10 +6,10 @@
 #include "../Model/Student.h"
 #include "../Model/Professor.h"
 #include "../Model/Course.h"
-
 class Controller {
     friend class Menu;
     friend class CommandsFromFileMenu;
+    friend class LeafMenu;
 private:
     std::string currentSemester;
     std::vector<Student> students;
